@@ -1,0 +1,91 @@
+<p class="bot-msg-info">
+  Welcome to profanity bot. This chatbot was made a joke, in order to prove a
+  point that the Implementation of AI in chatbots is one of the most lied-about
+  factors in the IT Industry, and how most companies implement chatbots just by
+  using if-else logic.
+</p>
+
+<p class="bot-msg-info">
+  Most websites just use chatbot as another FAQ system, where even the questions
+  have to be guessed by the users, making them a spectacular failure of
+  feature-overloading in the industry pitched by big tech, just to fool their
+  clients.
+</p>
+
+<p class="bot-msg-info">
+  Chatbots as a concept itself were a big failure, given how only a maximum of
+  4% of users use them, and how out of those 4%, only 0.76% get answers they
+  were actually looking for. Most websites today are just falling back to FAQs.
+</p>
+
+<p class="bot-msg-info">
+  This chatbot here itself was developed using an if-else logic, but can handle
+  flows fairly well. go ahead, try it out! Click the icon in the bottom right
+  corner.
+</p>
+
+<img class="bot-img" src="assets/bot.png" (click)="showChatWindow()" />
+
+<div
+  id="chatContainer"
+  class="CB-body CB-col-12 CB-col-sm-8 CB-col-md-6 CB-col-lg-4 chat-container"
+>
+  <div class="CB-row chat-header">
+    <div class="CB-col-12 CB-py-3 CB-d-flex CB-align-items-center">
+      <h4 class="CB-my-0 CB-mr-auto">CHATBOT</h4>
+      <span class="btn-icon" (click)="hideChatWindow()">
+        <i class="fas fa-times"></i>
+      </span>
+    </div>
+  </div>
+
+  <div id="cbChatBody" class="CB-row chat-body">
+    <div class="CB-col-12 conversation">
+      <ng-container *ngFor="let x of conversation">
+        <bot-response-message
+          *ngIf="x.messageFrom == 'bot'"
+          [message]="x"
+        ></bot-response-message>
+        <bot-user-query
+          *ngIf="x.messageFrom != 'bot'"
+          [message]="x"
+        ></bot-user-query>
+      </ng-container>
+    </div>
+  </div>
+
+  <div class="CB-row CB-py-2 chat-input">
+    <div class="CB-col-9 CB-pr-0">
+      <form #chatBotForm="ngForm" (ngSubmit)="postQuery()" autocomplete="off">
+        <div class="CB-input-group">
+          <input
+            type="text"
+            name="inputText"
+            id="inputText"
+            [(ngModel)]="inputText"
+            class="CB-form-control user-input"
+            placeholder="Enter Query"
+          />
+          <div class="CB-input-group-append">
+            <button type="submit" class="CB-btn CB-btn-success user-submit">
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="CB-col-3 CB-d-flex CB-align-items-center CB-pl-0">
+      <span class="btn-icon user-input-btn CB-ml-auto"
+        ><i class="fas fa-microphone-alt"></i
+      ></span>
+
+      <span class="btn-icon user-input-btn CB-mx-auto"
+        ><i class="fas fa-paperclip"></i
+      ></span>
+
+      <span class="btn-icon user-input-btn CB-mr-1"
+        ><i class="fas fa-camera-retro"></i
+      ></span>
+    </div>
+  </div>
+</div>

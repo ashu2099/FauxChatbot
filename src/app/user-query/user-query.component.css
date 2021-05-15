@@ -1,0 +1,11 @@
+.user-chat-bubble {
+  background-color: white;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.34);
+  border-radius: 16px;
+  border-top-right-radius: 0px;
+  word-break:break-all;
+}
+
+.user-msg-time {
+  font-size: 10px;
+}

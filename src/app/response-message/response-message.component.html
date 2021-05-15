@@ -1,0 +1,21 @@
+<div class="CB-row CB-no-gutters CB-mb-1">
+  <div class="CB-offset-1 CB-col-10 CB-pl-2">
+    <span class="bot-msg-time">{{ message.messageTime }}</span>
+  </div>
+  <div class="CB-w-100"></div>
+  <div class="CB-col-1">
+    <img src="assets/bot.png" class="CB-img-fluid" />
+  </div>
+  <div class="CB-col-11 CB-pl-2">
+    <div *ngIf="!showContent" class="bot-chat-bubble CB-m-0 CB-p-2">
+      <div class="spinner">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+      </div>
+    </div>
+    <p *ngIf="showContent" class="bot-chat-bubble CB-m-0 CB-p-2">
+      {{ message.messageText }}
+    </p>
+  </div>
+</div>
