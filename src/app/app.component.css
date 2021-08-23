@@ -1,6 +1,6 @@
-.bot-msg-info{
+.bot-msg-info {
   font-style: italic;
-  font-size:20px;
+  font-size: 20px;
   padding: 0px 20px 0px 20px;
 }
 
@@ -20,7 +20,7 @@
   transform: scale(0);
   transition: transform 0.5s;
   transform-origin: 100% 100%;
-  box-shadow: 0px 0px 16px rgba(0,0,0,0.3)!important;
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.3) !important;
 }
 
 .chat-open {
@@ -29,8 +29,6 @@
 
 .chat-header {
   color: white;
-  background-image: url("/assets/bot-bg.png"),
-    linear-gradient(var(--CB-theme-1), var(--CB-theme-1));
   background-position-x: right;
 }
 

@@ -27,7 +27,7 @@ export class ResponseGeneratorService {
     response2:
       "Different products have differntial features , the basic account features will include free debit card, SMS notification service, Cheque book, Zero fees for online transfers, Zero fees for draft issuance.\n\n Enter 'Yes' to select product and open account",
     response3:
-      "Kindly Select the product which needs to be opened\n1. Super Saver Account\n2. Flexi Deposit Account\n3. Max Gain Account\n Enter Product Number to Continue Account Opening.",
+      "Kindly type the index/number code the product which needs to be opened\n1. Super Saver Account\n2. Flexi Deposit Account\n3. Max Gain Account\n Enter Product Number to Continue Account Opening.",
     response4: "Hey, yourself! Ask me a question.",
     response5: "Hello, there! How may I help you today? ",
     response6: "I am doing fine, thank you.",
